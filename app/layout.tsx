@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import i18next from "@/i18n.config";
-
+import "@/styles/global.scss";
 interface IRootLayout {
   children: ReactNode;
 }
