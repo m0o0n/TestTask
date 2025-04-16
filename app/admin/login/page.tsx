@@ -4,7 +4,6 @@ import LoginForm from "@/components/forms/LoginForm";
 
 const LoginPage = () => (
   <AuthLayout>
-    <AuthHero />
     <LoginForm />
   </AuthLayout>
 );

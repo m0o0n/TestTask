@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import AuthHero from "../shared/AuthHero";
 
 interface IAuthLayoutProps {
   children: React.ReactNode;
@@ -13,6 +14,8 @@ const AuthLayout: React.FC<IAuthLayoutProps> = ({ children }) => {
         alignItems: "center",
         height: "100vh",
         width: "100vw",
+        py: "50px",
+        boxSizing: "content-box",
         ":before": {
           content: '""',
           position: "absolute",
@@ -27,6 +30,7 @@ const AuthLayout: React.FC<IAuthLayoutProps> = ({ children }) => {
         },
       }}
     >
+      <AuthHero />
       {children}
     </Box>
   );
