@@ -51,6 +51,10 @@ const RegisterSecondStep = () => {
         control={control}
         errorMessage={errors.country?.message}
         sx={{ marginTop: "16px" }}
+        options={[
+          { value: "USA", label: "USA" },
+          { value: "Canada", label: "Canada" },
+        ]}
       />
 
       <FormSelect<IRegisterFormValues>
@@ -60,6 +64,10 @@ const RegisterSecondStep = () => {
         control={control}
         errorMessage={errors.source?.message}
         sx={{ marginTop: "16px" }}
+        options={[
+          { value: "USA", label: "USA" },
+          { value: "Canada", label: "Canada" },
+        ]}
       />
 
       <RadioField<IRegisterFormValues>

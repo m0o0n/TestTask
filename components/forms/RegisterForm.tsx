@@ -15,6 +15,7 @@ import RegisterFirstStep from "./RegisterFirstStep";
 import RegisterSecondStep from "./RegisterSecondStep";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { registerUser } from "@/api/users";
 
 const stepFields: Record<number, (keyof IRegisterFormValues)[]> = {
   0: ["email", "firstName", "lastName", "password", "confirmPassword"],
@@ -45,8 +46,9 @@ const RegisterForm = () => {
     if (registrationProgress === 0) {
       setRegistrationProgress(1);
     } else {
-      handleSubmit((data) => {
+      handleSubmit(async (data) => {
         console.log("Form data", data);
+        await registerUser(data);
       })();
     }
   };
