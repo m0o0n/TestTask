@@ -1,5 +1,6 @@
 {
   "form": {
-    "welcome": "Welcome"
+    "welcome": "Welcome!",
+    "loginToContinue": "Login to continue"
   }
 }
