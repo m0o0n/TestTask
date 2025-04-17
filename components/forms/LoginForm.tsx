@@ -14,10 +14,12 @@ import PasswordInput from "../shared/PasswordInput";
 import SubmitButton from "../shared/SubmitButton";
 import theme from "@/theme/theme";
 import LinkButton from "../shared/LinkButton";
+import { axiosInstance } from "@/api/axios";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const { t } = useTranslation();
-
+  const router = useRouter();
   const {
     control,
     handleSubmit,
@@ -29,6 +31,8 @@ const LoginForm = () => {
 
   const onSubmit = async (data: ILoginFormValues) => {
     console.log("Login data", data);
+    await axiosInstance.post("auth/login", data);
+    router.push("/");
   };
 
   return (
